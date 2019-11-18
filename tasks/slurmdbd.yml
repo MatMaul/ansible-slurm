@@ -12,6 +12,8 @@
     owner: "{{ __slurm_user_name }}"
     group: root
     mode: 0400
+  with_items:
+    - config: slurmdbd_config
   notify:
     - reload slurmdbd
 
